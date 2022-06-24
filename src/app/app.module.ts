@@ -8,10 +8,12 @@ import { RoxellyHomeComponentComponent } from './roxelly-home-component/roxelly-
 import { RoxellyListComponentComponent } from './roxelly-list-component/roxelly-list-component.component';
 import { RouterModule } from '@angular/router';
 import { RoxellyListServiceService } from './roxelly-list-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
       {
