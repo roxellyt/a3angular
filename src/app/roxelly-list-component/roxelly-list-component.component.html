@@ -5,7 +5,7 @@
     <th>BRL</th>
   </tr>
 
-  <tr *ngFor="let rate of this.roxellyListServiceService.list">
+  <tr *ngFor="let rate of this.roxellyService.list">
     <td>{{ rate.time.updated }}</td>
     <td>{{ rate.bpi.USD.rate_float }}</td>
     <td>{{ rate.bpi.BRL.rate_float }}</td>
