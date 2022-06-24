@@ -6,9 +6,9 @@ import { RoxellyListServiceService } from '../roxelly-list-service.service';
   templateUrl: './roxelly-list-component.component.html',
   styleUrls: ['./roxelly-list-component.component.css'],
 })
-export class RoxellyListComponentComponent implements OnInit {
+export class RoxellyListComponentComponent {
   constructor(public roxellyService: RoxellyListServiceService) {
-    updateBitcoinRates() {
+    updateBitcoinRates(){
       this.roxellyService.update();
     }
   }
