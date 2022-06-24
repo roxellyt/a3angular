@@ -7,13 +7,11 @@ import { RoxellyListServiceService } from '../roxelly-list-service.service';
   styleUrls: ['./roxelly-list-component.component.css'],
 })
 export class RoxellyListComponentComponent implements OnInit {
-  constructor() {}
+  constructor(public roxellyService: RoxellyListServiceService) {
+    updateBitcoinRates() {
+      this.roxellyService.update();
+    }
+  }
 
   ngOnInit() {}
-
-  public roxellyService: RoxellyListServiceService;
-
-  updateBitcoinRates() {
-    this.roxellyService.update();
-  }
 }
