@@ -1,3 +1,13 @@
-<p>
-roxelly-list-component works!
-</p>
+<table style="width:100%">
+  <tr>
+    <th>Data/Hora</th>
+    <th>USD</th>
+    <th>BRL</th>
+  </tr>
+
+  <tr *ngFor="let rate of this.roxellyListServiceService.list">
+    <td>{{ rate.time.updated }}</td>
+    <td>{{ rate.bpi.USD.rate_float }}</td>
+    <td>{{ rate.bpi.BRL.rate_float }}</td>
+  </tr>
+</table>
