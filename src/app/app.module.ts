@@ -7,13 +7,17 @@ import { HelloComponent } from './hello.component';
 import { RoxellyHomeComponentComponent } from './roxelly-home-component/roxelly-home-component.component';
 import { RoxellyListComponentComponent } from './roxelly-list-component/roxelly-list-component.component';
 import { RouterModule } from '@angular/router';
+import { RoxellyListServiceService } from './roxelly-list-service.service';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: RoxellyHomeComponentComponent },
+      {
+        path: 'RoxellyHomeComponentComponent',
+        component: RoxellyHomeComponentComponent,
+      },
       {
         path: 'RoxellyListComponentComponent',
         component: RoxellyListComponentComponent,
@@ -27,5 +31,6 @@ import { RouterModule } from '@angular/router';
     RoxellyListComponentComponent,
   ],
   bootstrap: [AppComponent],
+  providers: [RoxellyListServiceService],
 })
 export class AppModule {}
