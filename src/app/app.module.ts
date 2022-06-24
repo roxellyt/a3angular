@@ -6,9 +6,20 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { RoxellyHomeComponentComponent } from './roxelly-home-component/roxelly-home-component.component';
 import { RoxellyListComponentComponent } from './roxelly-list-component/roxelly-list-component.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot([
+      { path: '', component: RoxellyHomeComponentComponent },
+      {
+        path: 'RoxellyListComponentComponent',
+        component: RoxellyListComponentComponent,
+      },
+    ]),
+  ],
   declarations: [
     AppComponent,
     HelloComponent,
