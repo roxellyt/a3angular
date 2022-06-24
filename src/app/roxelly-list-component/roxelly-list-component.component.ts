@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
 import { RoxellyListServiceService } from '../roxelly-list-service.service';
 
 @Component({
@@ -7,10 +7,12 @@ import { RoxellyListServiceService } from '../roxelly-list-service.service';
   styleUrls: ['./roxelly-list-component.component.css'],
 })
 export class RoxellyListComponentComponent {
-  constructor(public roxellyService: RoxellyListServiceService) {
-    updateBitcoinRates(){
-      this.roxellyService.update();
-    }
+  name = 'Angular ' + VERSION.major;
+
+  constructor(public roxellyService: RoxellyListServiceService) {}
+
+  updateBitcoinRate() {
+    this.roxellyService.update();
   }
 
   ngOnInit() {}
